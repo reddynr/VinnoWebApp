@@ -1,0 +1,75 @@
+<div class="container-fluid">
+  <div class="header">
+    <div class="wrap">
+      <span class="img_1"></span>
+      <h1><b>VINNO</b></h1>
+      <span class="img_2"></span>
+    </div>
+  </div>
+
+
+  <!--<form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>-->
+  <div>
+    <img src="assets/img/logo.png" alt="Smiley face" height="90" width="80">
+  </div>
+  &nbsp;&nbsp;
+  <form #userForm="ngForm"  novalidate>
+
+    <div class="row">
+      <div class="col-xs-6" class="w-50 p-3">
+
+        <section class="container"  class="host-panel" >
+        <div class="form-group">
+          <label><b>Innovator</b></label>
+          <input type="text" #name="ngModel"  class="form-control" [class.is-invalid]="name.invalid && name.touched" name="name" [(ngModel)]="userModel.name">
+          <!--   <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small> -->
+        </div>
+
+        <div class="form-group">
+          <label><b>Idea Title</b></label>
+          <input type="ideaTitle" class="form-control" name="ideaTitle" [(ngModel)]="userModel.ideaTitle">
+        </div>
+
+        <div class="form-group">
+          <label><b>Description</b></label>
+          <!-- matInput placeholder="Leave a comment" -->
+          <textarea type="textarea" class="form-control"  name="description" [(ngModel)]="userModel.description"></textarea>
+        </div>
+          <button (click)="onSubmit()" class="btn btn-primary" name="Submit" value="Submit">Submit</button>
+        </section>
+
+
+    </div>
+      <div class="col-xs-6" ng-if='innovator.length > 0'>
+
+        <section class="container"  class="host-panel">
+        <table class="table">
+          <tr>
+            <th>#</th>
+            <th>Innovator</th>
+            <th>Idea Title</th>
+            <th>Comments</th>
+
+          </tr>
+          <tr *ngFor="let game of innovator; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{game.name}}</td>
+            <td>{{game.ideaTitle}}</td>
+            <td>{{game.description}}</td>
+
+          </tr>
+        </table>
+        </section>
+      </div>
+    </div>
+
+
+
+
+    &nbsp;&nbsp;
+    &nbsp;&nbsp;
+
+  </form>
+
+
+</div>

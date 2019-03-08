@@ -1,0 +1,52 @@
+.ad-left {
+  float: left;
+}
+
+.ad-right {
+  float: right;
+  margin-left: 10px;
+}
+
+.entire-thing {
+  width: 650px;
+}
+
+.header .wrap {
+  border: 1px solid #f00;
+  width: 150px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.header .wrap .img_1, .header .wrap .img_2 {
+  border: 1px solid #0f0;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 25px;
+}
+
+.header .wrap .img_1 {
+  left: 0;
+}
+
+.header .wrap .img_2 {
+  right: 0;
+}
+section.wrapper {
+  min-width: 400px; /* Minimum width of your wrapper element */
+  overflow: hidden;
+  display: inline-block;
+}
+.form-controller {
+  box-sizing: border-box;
+}
+
+.host-panel {
+
+  box-sizing: border-box;
+  padding: 32px;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+}
